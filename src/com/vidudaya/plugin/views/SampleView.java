@@ -15,12 +15,17 @@ import com.vidudaya.plugin.api.JavaVersion;
 
 public class SampleView extends ViewPart {
 
+	// Browser :
+	// https://help.eclipse.org/neon/index.jsp?topic=%2Forg.eclipse.platform.doc.isv%2Freference%2Fapi%2Forg%2Feclipse%2Fswt%2Fbrowser%2FBrowser.html
 	Browser browser;
 
 	@Override
 	public void createPartControl(Composite parent) {
 		GridLayout gridLayout = new GridLayout(1, false);
 
+		// Understanding Layouts in SWT :
+		// http://www.eclipse.org/articles/article.php?file=Article-Understanding-Layouts/index.html
+		
 		parent.setLayout(gridLayout);
 		GridData gridData = new GridData(SWT.FILL, SWT.FILL, true, true);
 		gridData.horizontalAlignment = GridData.FILL;
@@ -36,6 +41,8 @@ public class SampleView extends ViewPart {
 		ClassLoader classLoader = getClass().getClassLoader();
 		String content;
 		try {
+			// Read the file content from the actual html file to a String
+			// https://www.mkyong.com/java/java-read-a-file-from-resources-folder/
 			content = IOUtils.toString(classLoader
 					.getResourceAsStream("com/vidudaya/plugin/html/home.html"),
 					"UTF-8");
@@ -46,6 +53,7 @@ public class SampleView extends ViewPart {
 			e.printStackTrace();
 		}
 		
+		// Associate the 'getJavaVersion' function in 'JavaVersion.java' with the browser control
 		new JavaVersion(browser, "getJavaVersion");
 
 		parent.pack();
