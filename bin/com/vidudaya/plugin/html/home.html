@@ -7,7 +7,12 @@
 
 	function getVersion() {
 		var javaVersion = getJavaVersion();
-		alert("javaVersion : " + javaVersion);
+		alert("javaVersion : " + javaVersion[1]);
+	};
+	
+	function getRelatedLowBugs() {
+		var bugs = getLowBugs();
+		alert("bug : " + bugs[1]);
 	};
 </script>
 </head>
@@ -16,6 +21,7 @@
 	<h1>testing</h1>
 	<button onclick="sayHello();">Click Me</button>
 	<button onclick="getVersion();">Get Java Version</button>
+	<button onclick="getRelatedLowBugs();">Get Low Bugs</button>
 </body>
 
 </html>

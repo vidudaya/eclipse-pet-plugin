@@ -12,6 +12,7 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.ui.part.ViewPart;
 
 import com.vidudaya.plugin.api.JavaVersion;
+import com.vidudaya.plugin.api.LowBugs;
 
 public class SampleView extends ViewPart {
 
@@ -55,7 +56,8 @@ public class SampleView extends ViewPart {
 		
 		// Associate the 'getJavaVersion' function in 'JavaVersion.java' with the browser control
 		new JavaVersion(browser, "getJavaVersion");
-
+		new LowBugs(browser, "getLowBugs");
+		
 		parent.pack();
 
 	}

@@ -48,13 +48,13 @@ public class JavaVersion extends BrowserFunction {
 		String response = "Successfully called a Java function : Java Version = "
 				+ javaVersion;
 
-		String output = getsMap();
+		//String output = getsMap();
 
-		return output;
+		return getArray();
 	}
 
 	public String gets() {
-		String[] sentences = new String[3];
+		Object[] sentences = new String[3];
 		sentences[0] = "Hi";
 		sentences[1] = "Hello";
 		sentences[2] = "How";
@@ -65,6 +65,15 @@ public class JavaVersion extends BrowserFunction {
 		System.out.println("array in  : " + jsonArray);
 
 		return jsonArray;
+	}
+	
+	public Object[] getArray() {
+		Object[] sentences = new String[3];
+		sentences[0] = "Hi";
+		sentences[1] = "Hello";
+		sentences[2] = "How";
+
+		return sentences;
 	}
 
 	public String getsMap() {
@@ -80,5 +89,15 @@ public class JavaVersion extends BrowserFunction {
 		System.out.println("array in  : " + jsonArray);
 
 		return jsonArray;
+	}
+	
+	public Map<Object, Object> getMap() {
+
+		Map<Object, Object> map = new HashMap<>();
+		map.put("key1", 100);
+		map.put("key2", 300);
+		map.put("key3", 400);		
+
+		return map;
 	}
 }
