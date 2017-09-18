@@ -5,6 +5,7 @@ import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.osgi.framework.BundleContext;
 
 /**
+ * Plugin info (How to develop) https://www.codeproject.com/Tips/893547/How-to-Create-Your-Own-Eclipse-IDE-Plug-in
  * The activator class controls the plug-in life cycle
  */
 public class Activator extends AbstractUIPlugin {
