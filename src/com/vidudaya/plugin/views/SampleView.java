@@ -11,8 +11,10 @@ import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.ui.part.ViewPart;
 
+import com.vidudaya.plugin.api.BugTrack;
 import com.vidudaya.plugin.api.JavaVersion;
 import com.vidudaya.plugin.api.LowBugs;
+import com.vidudaya.plugin.api.MonthlyProgress;
 
 public class SampleView extends ViewPart {
 
@@ -57,6 +59,8 @@ public class SampleView extends ViewPart {
 		// Associate the 'getJavaVersion' function in 'JavaVersion.java' with the browser control
 		new JavaVersion(browser, "getJavaVersion");
 		new LowBugs(browser, "getLowBugs");
+		new BugTrack(browser, "getBugs");
+		new MonthlyProgress(browser, "getMonthlyBugCounts");
 		
 		parent.pack();
 

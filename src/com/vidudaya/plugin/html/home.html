@@ -14,6 +14,16 @@
 		var bugs = getLowBugs();
 		alert("bug : " + bugs[1]);
 	};
+	
+	function getRelatedBugs() {
+		var bugs = getBugs('low');
+		alert("bug : " + bugs[1]);
+	};
+	
+	function getRelatedMonthlyBugCounts() {
+		var bugs = getMonthlyBugCounts('high');
+		alert("Monthly bug : " + bugs[1]);
+	};
 </script>
 </head>
 
@@ -22,6 +32,8 @@
 	<button onclick="sayHello();">Click Me</button>
 	<button onclick="getVersion();">Get Java Version</button>
 	<button onclick="getRelatedLowBugs();">Get Low Bugs</button>
+	<button onclick="getRelatedBugs();">Get Bugs</button>
+	<button onclick="getRelatedMonthlyBugCounts();">Get monthly Bugs</button>
 </body>
 
 </html>
